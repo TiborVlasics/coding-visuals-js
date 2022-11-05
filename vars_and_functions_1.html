@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <canvas width="600" height="600"></canvas>
+    <script>
+        let canvas = document.querySelector('canvas');
+        let context = canvas.getContext('2d');
+
+        context.fillStyle = '#123456';
+
+        // circle
+        context.beginPath();
+        context.fillStyle = "rgba(230, 3, 45, 0.7)";
+        context.arc(300, 300, 100, 0, Math.PI * 2);
+        context.fill()
+
+        context.lineWidth = 12;
+        context.beginPath();
+        context.moveTo(100, 100)
+        context.bezierCurveTo(200, 150, 100, 120, 320, 440);
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(400, 100)
+        context.bezierCurveTo(200, 150, 100, 120, 320, 340);
+        context.stroke();
+
+
+    </script>
+</body>
+
+</html>
